@@ -6,7 +6,6 @@
         data-aos="flip-left"
         data-aos-duration="2000"
         data-aos-once="true"
-        data-aos-anchor-placement="center-center"
         id="imageLogo"
         src="@/assets/images/logo.png"
         alt

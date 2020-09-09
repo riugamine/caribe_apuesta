@@ -60,11 +60,13 @@ export default {
 </script>
 
 <style>
+
 .letters{
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding: auto;
 }
 
 .letters ul{
@@ -79,7 +81,7 @@ export default {
 }
 
 .letters ul li a{
-  position: relative;
+  text-align: center;
   color: transparent;
   text-decoration: none;
   text-transform: uppercase;

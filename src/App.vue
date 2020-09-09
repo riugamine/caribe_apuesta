@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="side_menu" absolute temporary>
+    <v-navigation-drawer v-model="side_menu" absolute temporary style="position: fixed">
       <v-list dense>
         <v-list-item v-for="item in items" :key="item.title" link>
           <v-list-item-icon>
@@ -13,6 +13,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+
     <v-app-bar app color="#000033" dark prominent>
       <div
         class="d-flex align-center"
@@ -27,7 +28,7 @@
         <v-img
           alt="Caribe apuesta logo"
           id="logoLogo"
-          class="shrink mr-2"
+          class="shrink mr-2 py-3"
           contain
           src="@/assets/images/ELEMENTO.png"
           transition="scale-transition"
@@ -231,13 +232,14 @@
         </v-col>
         <v-col class="pb-0 pt-2">
           <v-btn dark icon fab light>
-            <v-icon size="35">mdi-whatsapp</v-icon>
+            <v-icon size="35" v-on:click="redirectWapp">mdi-whatsapp</v-icon>
           </v-btn>
         </v-col>
         <v-col cols="12" style="background-color: #000033">
           <h4
             id="text-footer"
             class="d-flex justify-center white--text mayeka"
+            style="font-size: 8px"
           >&copy; {{ new Date().getFullYear() }} MANUAL CODE - TODOS LOS DERECHOS RESERVADOS</h4>
         </v-col>
       </v-row>
@@ -283,6 +285,12 @@ export default {
         { title: "RESULTADOS", icon: "mdi-cards-playing-outline" },
       ],
     };
+  },
+
+  methods:{
+    redirectWapp: function (event) {
+      window.open("https://wa.me/584123010777?text=Buen día, tengo algunas dudas sobre Caribe Apuestas...");
+    }
   },
 };
 </script>
@@ -334,10 +342,9 @@ body[data-aos-duration="5000"] [data-aos],
   transition-duration: 5000ms;
 }
 @media (max-width: 600px) {
-  #text-footer,
   .letters,
   .letters3 {
-    font-size: 10px !important;
+    font-size: 8px !important;
   }
 }
 @media (max-width: 1300px) {

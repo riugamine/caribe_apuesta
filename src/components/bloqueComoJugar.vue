@@ -87,6 +87,7 @@ img {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding: auto;
 }
 
 .letters ul{
@@ -101,7 +102,7 @@ img {
 }
 
 .letters ul li a{
-  position: relative;
+  text-align: center;
   color: transparent;
   text-decoration: none;
   text-transform: uppercase;

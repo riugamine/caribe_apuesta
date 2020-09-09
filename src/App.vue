@@ -248,7 +248,7 @@
           <h4
             id="text-footer"
             class="d-flex justify-center white--text mayeka"
-            style="font-size: 8px"
+            style="font-size: 9px"
           >&copy; {{ new Date().getFullYear() }} MANUAL CODE - TODOS LOS DERECHOS RESERVADOS</h4>
         </v-col>
       </v-row>

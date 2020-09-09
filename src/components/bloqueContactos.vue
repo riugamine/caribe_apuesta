@@ -15,7 +15,7 @@
                     href
                     class="my-12"
                     style="font-size:14pt; text-decoration:none; color:white"
-                  >CARIBEAPUESTA.COM</a>
+                  >soporte@caribeapuesta.com</a>
                   <br />
                   <br />
                   <a href style="font-size:14pt; text-decoration:none; color:white">Link</a>

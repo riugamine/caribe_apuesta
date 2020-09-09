@@ -8,7 +8,16 @@
           </v-list-item-icon>
 
           <v-list-item-content>
-            <v-list-item-title color="#000033" class="mayeka">{{ item.title }}</v-list-item-title>
+            <v-list-item-title 
+              color="#000033" class="mayeka" v-if="item.title !== 'INICIAR SESIÓN' && item.title !== 'REGISTRARSE'"
+              @click="$vuetify.goTo( item.redirection, 0, 2000)">
+              {{ item.title }}
+            </v-list-item-title>
+
+            <v-list-item-title 
+              color="#000033" class="mayeka" v-else>
+              {{ item.title }}
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -279,17 +288,19 @@ export default {
       items: [
         { title: "INICIAR SESIÓN", icon: "mdi-login-variant" },
         { title: "REGISTRARSE", icon: "mdi-account-plus-outline" },
-        { title: "JUEGOS", icon: "mdi-poker-chip" },
-        { title: "¿CÓMO JUGAR?", icon: "mdi-help-circle-outline" },
-        { title: "PAGOS", icon: "mdi-credit-card-multiple-outline" },
-        { title: "RESULTADOS", icon: "mdi-cards-playing-outline" },
+        { title: "JUEGOS", icon: "mdi-poker-chip", redirection: "#bloqueJuegos" },
+        { title: "¿CÓMO JUGAR?", icon: "mdi-help-circle-outline", redirection: "#bloqueComoJugar" },
+        { title: "PAGOS", icon: "mdi-credit-card-multiple-outline", redirection: "#bloquePagos" },
+        { title: "RESULTADOS", icon: "mdi-cards-playing-outline", redirection: "#resultados" },
       ],
     };
   },
 
   methods:{
     redirectWapp: function (event) {
-      window.open("https://wa.me/584123010777?text=Buen día, tengo algunas dudas sobre Caribe Apuestas...");
+      /* https://wa.me/584123010777?text=Buen día, tengo algunas dudas sobre Caribe Apuestas... */
+      /* https://web.whatsapp.com/send?phone=584123010777 */
+      window.open("https://web.whatsapp.com/send?phone=584123010777");
     }
   },
 };

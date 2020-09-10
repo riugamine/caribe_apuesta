@@ -13,11 +13,61 @@
               @click="$vuetify.goTo( item.redirection, 0, 2000)">
               {{ item.title }}
             </v-list-item-title>
-
+            
+          <!-- Menu desplegable para registrarse -->
+          <v-dialog v-model="iniciar_sesion" width="500" v-else-if="item.title !== 'INICIAR SESIÓN'">
+            <template v-slot:activator="{on,attrs}">
             <v-list-item-title 
-              color="#000033" class="mayeka" v-else>
-              {{ item.title }}
+              color="#000033" class="mayeka" v-on="on" v-bind="attrs">
+            {{ item.title }}
+
             </v-list-item-title>
+            </template>
+
+            <v-card color="#000033" light elevation="12">
+              <v-card-title class="justify-center">
+                <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
+              </v-card-title>
+              <v-card-text class="pb-0">
+                <v-container fluid class="px-4 pb-0">
+                  <v-form>
+                    <v-text-field class="mayeka" rounded solo placeholder="USUARIO O EMAIL"></v-text-field>
+                    <v-text-field class="mayeka" rounded solo placeholder="CONTRASEÑA"></v-text-field>
+                  </v-form>
+                </v-container>
+              </v-card-text>
+              <v-card-actions class="d-flex justify-center pt-0 pb-8">
+                <v-btn rounded outlined color="white" class="mayeka">INICIAR SESIÓN</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+          <!-- Menu desplegable para registrarse -->
+          <v-dialog v-model="iniciar_sesion" width="500" v-else-if="item.title !== 'REGISTRARSE'">
+            <template v-slot:activator="{on,attrs}">
+            <v-list-item-title 
+              color="#000033" class="mayeka" v-on="on" v-bind="attrs">
+            {{ item.title }}
+
+            </v-list-item-title>
+            </template>
+
+            <v-card color="#000033" light elevation="12">
+              <v-card-title class="justify-center">
+                <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
+              </v-card-title>
+              <v-card-text class="pb-0">
+                <v-container fluid class="px-4 pb-0">
+                  <v-form>
+                    <v-text-field class="mayeka" rounded solo placeholder="USUARIO O EMAIL"></v-text-field>
+                    <v-text-field class="mayeka" rounded solo placeholder="CONTRASEÑA"></v-text-field>
+                  </v-form>
+                </v-container>
+              </v-card-text>
+              <v-card-actions class="d-flex justify-center pt-0 pb-8">
+                <v-btn rounded outlined color="white" class="mayeka">INICIAR SESIÓN</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -149,7 +199,7 @@
             </v-card>
           </v-dialog>
 
-          <v-dialog v-model="regisrarse" width="500">
+          <v-dialog v-model="iniciar_sesion" width="500">
             <template v-slot:activator="{on,attrs}">
               <v-btn
                 v-on="on"
@@ -282,6 +332,7 @@ export default {
   },
   data() {
     return {
+      iniciar_sesion:false,
       registrarse: false,
       chat: false,
       side_menu: false,

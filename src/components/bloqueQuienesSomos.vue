@@ -2,7 +2,7 @@
   <div id="bloqueQuienesSomos">
     <v-sheet color="white">
       <v-container fluid class="pa-0 ma-0">
-        <v-row no-gutters>
+        <v-row no-gutters style="overflow-x: hidden">
           <v-col class="d-flex child-flex" cols="12" sm="6">
             <v-card class="text-center mayeka" elevation="0">
               <div  class="center">

@@ -86,6 +86,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-overflow: ellipsis;
   overflow: hidden;
   padding: auto;
 }

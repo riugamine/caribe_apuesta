@@ -8,39 +8,41 @@
           </ul>
         </v-card-title>
 
-        <v-row>
+        <v-row class="ma-0" style="overflow-x: hidden; overflow-y: hidden;">
           <v-col cols="12" xl="8" lg="8" md="8" sm="8" xs="12" class="post" 
-        data-aos="fade-down-right" 
-        data-aos-duration="2000"
-        data-aos-anchor-placement="center-bottom"
-        data-aos-once="false">
+                data-aos="fade-down-right" 
+                data-aos-duration="2000"
+                data-aos-once="false">
             <v-img class="imgJuegos" src="@/assets/images/la-granjita.jpg" max-height="300"></v-img>
             <div class="post-s mayeka">
               <h2>Animalitos</h2>
             </div>
           </v-col>
-          <v-col cols="12" xl="4" lg="4" md="4" sm="4" xs="12" class="post" data-aos="fade-down-left" 
-        data-aos-duration="2000"
-        
-        data-aos-once="false">
+
+          <v-col cols="12" xl="4" lg="4" md="4" sm="4" xs="12" class="post" 
+                data-aos="fade-down-left" 
+                data-aos-duration="2000"
+                data-aos-once="false">
             <v-img class="imgJuegos" src="@/assets/images/juego-4.jpg" max-height="300"></v-img>
             <div class="post-s mayeka">
               <h2>Caballos</h2>
             </div>
           </v-col>
-          <v-col cols="12" xl="4" lg="4" md="4" sm="4" xs="12" class="post" data-aos="fade-up-right" 
-        data-aos-duration="2000"
-        
-        data-aos-once="false">
+
+          <v-col cols="12" xl="4" lg="4" md="4" sm="4" xs="12" class="post" 
+                data-aos="fade-up-right" 
+                data-aos-duration="2000"
+                data-aos-once="false">
             <v-img class="imgJuegos" src="@/assets/images/juego-3.jpg" max-height="300"></v-img>
             <div class="post-s mayeka">
               <h2>Parley</h2>
             </div>
           </v-col>
-          <v-col cols="12" xl="8" lg="8" md="8" sm="8" xs="12" class="post" data-aos="fade-up-left" 
-        data-aos-duration="2000"
-        
-        data-aos-once="false">
+
+          <v-col cols="12" xl="8" lg="8" md="8" sm="8" xs="12" class="post" 
+                data-aos="fade-up-left" 
+                data-aos-duration="2000"
+                data-aos-once="false">
             <v-img class="imgJuegos" src="@/assets/images/juego-2.jpg" max-height="300"></v-img>
             <div class="post-s mayeka">
               <h2>Casino</h2>
@@ -63,6 +65,7 @@ export default {
 
 .letters{
   display: flex;
+  text-overflow: ellipsis;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -167,5 +170,12 @@ export default {
   border: 2px solid white;
   padding: 10px 30px;
   box-shadow: -1px 2px 30px 5px rgba(255, 255, 255, 0.35);
+}
+
+@media (max-width: 600px) {
+  .post {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
 }
 </style>

@@ -248,7 +248,7 @@
           <h4
             id="text-footer"
             class="d-flex justify-center white--text mayeka"
-            style="font-size: 8px"
+            style="font-size: 9px"
           >&copy; {{ new Date().getFullYear() }} MANUAL CODE - TODOS LOS DERECHOS RESERVADOS</h4>
         </v-col>
       </v-row>
@@ -353,9 +353,9 @@ body[data-aos-duration="5000"] [data-aos],
   transition-duration: 5000ms;
 }
 @media (max-width: 600px) {
-  .letters,
-  .letters3 {
-    font-size: 8px !important;
+  .letters ul li a,
+  .letters3 ul li a{
+    font-size: 20px !important;
   }
 }
 @media (max-width: 1300px) {

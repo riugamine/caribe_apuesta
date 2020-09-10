@@ -3,7 +3,10 @@
     <v-card color="white" light tile elevation="0" class="py-6">
       <v-card-title class="justify-center mayeka letters3">
         <ul>
-          <li><a data-text="MÉTODOS DE PAGO Y COBRO" class="mayeka" style="letter-spacing:10px; color:#ffff; font-size:20pt">MÉTODOS DE PAGO Y COBRO</a></li>
+          <li><a data-text="MÉTODO DE PAGO" class="mayeka" style="letter-spacing:10px; color:#ffff; font-size:20pt">MÉTODO DE PAGO</a></li>
+        </ul>
+        <ul>
+          <li><a data-text="Y COBRO" class="mayeka" style="letter-spacing:10px; color:#ffff; font-size:20pt">Y COBRO</a></li>
         </ul>
       </v-card-title>
     </v-card>
@@ -100,6 +103,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
   padding: auto;
 }
@@ -165,16 +169,10 @@ export default {
   transform: translateX(0);
   opacity: 1;
 }
-/* 
-@media (max-width: 880px) {
-  .letters3 {
-    font-size: 10px !important;
+ 
+@media (min-width: 700px) {
+  .letters3 ul{
+    padding-left: 0px !important
   }
 }
-
-@media (max-width: 600px) {
-  .letters3 {
-    font-size: 8px !important;
-  }
-} */
 </style>

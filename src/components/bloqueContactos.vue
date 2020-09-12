@@ -7,24 +7,30 @@
           <v-col cols="12" md="4" sm="6" id="footContact">
             <v-card color="#000345" flat tile dark>
               <v-card-title class="justify-center pt-7">
-                <h3 style="letter-spacing:4px;" class="mayeka">CONTACTO</h3>
+                <h3 style="letter-spacing:4px;" class="mayeka">INFORMACIÓN</h3>
               </v-card-title>
               <v-card-text class="">
-                <p class="text-center mayeka">
-                  <a href="soporte@caribeapuesta.com" target="soporte@caribeapuesta.com" class="my-12" style="font-size:11pt; text-decoration:none; color:white">
+                <p class="text-center mayeka inf-text">
+                  <a style="font-size:11pt; text-decoration:none; color:white">
+                    Reglas y Terminos
+                  </a>
+                </p>
+
+                <p class="text-center mayeka inf-text">
+                  <a href="soporte@caribeapuesta.com" target="soporte@caribeapuesta.com" style="font-size:11pt; text-decoration:none; color:white">
                     soporte@caribeapuesta.com
                   </a>
                 </p>
 
-                <p class="text-center mayeka">
-                  <a class="my-12" style="font-size:11pt; text-decoration:none; color:white">
+                <p class="text-center mayeka inf-text">
+                  <a style="font-size:11pt; text-decoration:none; color:white">
                     Número: +58-412-3010777
                   </a>
                 </p>
 
-                <p class="text-center mayeka">
+                <p class="text-center mayeka inf-text">
                   <a style="font-size:11pt; text-decoration:none; color:white">
-                    RIF: J-410793953
+                    RIF: J-409540634
                   </a>
                 </p>
               </v-card-text>
@@ -71,14 +77,12 @@
 
           <v-col class="white--text mayeka pb-0" cols="12" md="4" sm="6" id="footImages">
             <v-card color="#000345" flat tile class="text-center pa-0">
-              <!-- <img src="@/assets/images/+18.png" width="100" height="auto" /> -->
               <img src="@/assets/images/Logo-02.png" width="150" height="auto"/>
             </v-card>
           </v-col>
 
           <v-col class="white--text mayeka pb-0" cols="12" md="4" sm="6" id="footImages">
             <v-card color="#000345" flat tile class="text-center">
-              <!-- <img src="@/assets/images/+18.png" width="100" height="auto" /> -->
               <img src="@/assets/images/ssl-certificate.png" width="150" height="auto"/>
             </v-card>
           </v-col>
@@ -111,10 +115,8 @@ export default {
     margin-right: 4px;
   }
 
-  /* @media (max-width: 960px) {
-    #footContact, #footDirection{
-      border-bottom: 1px solid white;
-    }
-  } */
+  .inf-text:hover{
+    font-weight: bold;
+  }
 </style>
 

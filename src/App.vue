@@ -14,8 +14,8 @@
               {{ item.title }}
             </v-list-item-title>
             
-          <!-- Menu desplegable para registrarse -->
-          <v-dialog v-model="iniciar_sesion" width="500" v-else-if="item.title !== 'INICIAR SESIÓN'">
+          <!-- Menu desplegable para registarse -->
+          <v-dialog v-model="registrarse" width="500" v-else-if="item.title !== 'INICIAR SESIÓN'">
             <template v-slot:activator="{on,attrs}">
             <v-list-item-title 
               color="#000033" class="mayeka" v-on="on" v-bind="attrs">
@@ -31,17 +31,41 @@
               <v-card-text class="pb-0">
                 <v-container fluid class="px-4 pb-0">
                   <v-form>
-                    <v-text-field class="mayeka" rounded solo placeholder="USUARIO O EMAIL"></v-text-field>
+                    <v-row >
+                    <v-col cols="12" class="pb-0">
+                    <v-text-field class="mayeka" rounded solo placeholder="USUARIO"></v-text-field>
+                    </v-col>
+                    <v-col cols="6" class="pb-0">
+                    <v-text-field class="mayeka" rounded solo placeholder="NOMBRE"></v-text-field>
+
+                    </v-col>
+                    <v-col cols="6" class="pb-0">
+
+                    <v-text-field class="mayeka" rounded solo placeholder="CÉDULA"></v-text-field>
+                    </v-col>
+                    <v-col cols="12" class="pb-0">
+                    <v-text-field class="mayeka" rounded solo placeholder="CORREO"></v-text-field>
+                    <v-text-field class="mayeka" rounded solo placeholder="REPETIR CORREO"></v-text-field>
+
+                    </v-col>
+                    <v-col cols="6" class="pb-0">
                     <v-text-field class="mayeka" rounded solo placeholder="CONTRASEÑA"></v-text-field>
+
+                    </v-col>
+                    <v-col cols="6" class="pb-0">
+                    <v-text-field class="mayeka" rounded solo placeholder="REPETIR CONTRASEÑA"></v-text-field>
+
+                    </v-col>
+                    </v-row>
                   </v-form>
                 </v-container>
               </v-card-text>
               <v-card-actions class="d-flex justify-center pt-0 pb-8">
-                <v-btn rounded outlined color="white" class="mayeka">INICIAR SESIÓN</v-btn>
+                <v-btn rounded outlined color="white" large class="mayeka">CREAR USUARIO</v-btn>
               </v-card-actions>
             </v-card>
           </v-dialog>
-          <!-- Menu desplegable para registrarse -->
+          <!-- Menu desplegable para iniciar sesion -->
           <v-dialog v-model="iniciar_sesion" width="500" v-else-if="item.title !== 'REGISTRARSE'">
             <template v-slot:activator="{on,attrs}">
             <v-list-item-title 
@@ -143,7 +167,7 @@
             data-aos-once="true"
             @click="$vuetify.goTo('#resultados', 0, 2000)"
           >RESULTADOS</v-btn>
-          <v-dialog v-model="regisrarse" width="700">
+          <v-dialog v-model="registrarse" width="700">
             <template v-slot:activator="{on,attrs}">
               <v-btn
                 v-on="on"
@@ -248,7 +272,7 @@
         <v-col>
           <v-dialog v-model="chat" hide-overlay>
             <template v-slot:activator="{on,attrs}">
-              <v-btn v-on="on" v-bind="attrs" absolute right top v-model="fab" light class="mr-8">
+              <v-btn v-on="on" v-bind="attrs" absolute right top light class="mr-8">
                 <span>CHAT EN VIVO</span>
               </v-btn>
             </template>
@@ -298,8 +322,8 @@
           <h4
             id="text-footer"
             class="d-flex justify-center white--text mayeka"
-            style="font-size: 9px"
-          >&copy; {{ new Date().getFullYear() }} MANUAL CODE - TODOS LOS DERECHOS RESERVADOS</h4>
+            style="font-size: 12px"
+          >&copy; {{ new Date().getFullYear() }} CARIBEAPUESTA.COM - TODOS LOS DERECHOS RESERVADOS</h4>
         </v-col>
       </v-row>
     </v-footer>
@@ -351,7 +375,7 @@ export default {
     redirectWapp: function (event) {
       /* https://wa.me/584123010777?text=Buen día, tengo algunas dudas sobre Caribe Apuestas... */
       /* https://web.whatsapp.com/send?phone=584123010777 */
-      window.open("https://web.whatsapp.com/send?phone=584123010777");
+      window.open("https://wa.me/584123010777");
     }
   },
 };
@@ -436,6 +460,12 @@ body[data-aos-duration="5000"] [data-aos],
 
   #logoLogo {
     margin: auto;
+  }
+}
+
+@media (max-width: 395px) {
+  #text-footer {
+    font-size: 9px !important;
   }
 }
 </style>

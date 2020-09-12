@@ -21,7 +21,7 @@
                     data-aos-once="false"
                     data-aos-anchor-placement="bottom-bottom">
                   <v-card-text 
-                    class="white--text mayeka" 
+                    class="white--text mayeka forma-pago" 
                     style="font-size:14pt; line-height:20pt"
                     data-aos="fade-right" 
                     data-aos-duration="3000"
@@ -36,7 +36,7 @@
                     data-aos-duration="2000"
                     data-aos-once="false"
                     data-aos-anchor-placement="bottom-bottom">
-                  <v-card-text class="white--text mayeka" style="font-size:14pt"
+                  <v-card-text class="white--text mayeka forma-pago" style="font-size:14pt"
                     data-aos="fade-right" 
                     data-aos-duration="3000"
                     data-aos-anchor-placement="bottom-bottom"
@@ -50,7 +50,7 @@
                     data-aos-duration="2000"
                     data-aos-once="false"
                     data-aos-anchor-placement="bottom-bottom">
-                  <v-card-text class="white--text mayeka" style="font-size:14pt"
+                  <v-card-text class="white--text mayeka forma-pago" style="font-size:14pt"
                     data-aos="fade-right" 
                     data-aos-duration="3000"
                     data-aos-anchor-placement="bottom-bottom"
@@ -64,7 +64,7 @@
                     data-aos-duration="2000"
                     data-aos-once="false"
                     data-aos-anchor-placement="bottom-bottom">
-                  <v-card-text class="white--text mayeka" style="font-size:14pt"
+                  <v-card-text class="white--text mayeka forma-pago" style="font-size:14pt"
                     data-aos="fade-right" 
                     data-aos-duration="3000"
                     data-aos-anchor-placement="bottom-bottom"
@@ -78,7 +78,7 @@
                     data-aos-duration="2000"
                     data-aos-once="false"
                     data-aos-anchor-placement="bottom-bottom">
-                  <v-card-text class="white--text mayeka" style="font-size:14pt"
+                  <v-card-text class="white--text mayeka forma-pago" style="font-size:14pt"
                     data-aos="fade-right" 
                     data-aos-duration="3000"
                     data-aos-anchor-placement="bottom-bottom"
@@ -169,7 +169,19 @@ export default {
   transform: translateX(0);
   opacity: 1;
 }
- 
+
+@media (max-width: 1282px) {
+  .forma-pago{
+    font-size: 13pt !important
+  }
+}
+
+@media (max-width: 1263px) {
+  .forma-pago{
+    font-size: 14pt !important
+  }
+}
+
 @media (min-width: 700px) {
   .letters3 ul{
     padding-left: 0px !important

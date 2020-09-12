@@ -19,7 +19,7 @@
                 <img src="@/assets/images/j0.jpg" alt="como jugar 0" height="550" width="100%" />
                 <figcaption class="mayeca">
                   <h2>REGISTRATE EN LA <span>WEB</span></h2>
-                  <p>Lorem Ipsum es simplemente el ición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+                  <p>Presiona sobre el boton de registrarse e ingresa la información para generar un nuevo usuario dentro de caribe apuesta.</p>
                   <a href="#redireccion a un lugar">View more</a>
                 </figcaption>	
               </v-card>
@@ -32,7 +32,7 @@
                 <img src="@/assets/images/j1.jpg" alt="como jugar 1" height="550" width="100%" />
                 <figcaption class="mayeca">
                   <h2>CARGA TU <span>SALDO</span></h2>
-                  <p>Lorem Ipsum es simplemente el ición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+                  <p>Utiliza los procesadores de pago indicados y suministra la información del deposito realizado, una vez que haya sido validado se cargara el monto a tu saldo.</p>
                   <a href="#redireccion a un lugar">View more</a>
                 </figcaption>	
               </v-card>
@@ -45,7 +45,7 @@
               <img src="@/assets/images/j2.jpg" alt="como jugar 2" height="550" width="100%" />
                 <figcaption class="mayeca">
                   <h2>INGRESA Y <span>JUEGA</span></h2>
-                  <p>Lorem Ipsum es simplemente el ición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+                  <p>Inicia Sesión y disfruta los distintos juegos que tenemos para ti, desde animalitos, loteria, casino, hipismo y parley.</p>
                   <a href="#redireccion a un lugar">View more</a>
                 </figcaption>	
               </v-card>
@@ -58,7 +58,7 @@
               <img src="@/assets/images/j3.jpg" alt="como jugar 3" height="550" width="100%" />
                 <figcaption class="mayeca">
                   <h2>RETIRA TU <span>DINERO</span></h2>
-                  <p>Lorem Ipsum es simplemente el ición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+                  <p>Ingresa en la sección de retiros y selecciona el método de pago que deseas, más la información y el monto solicitado para hacer dicho envio.</p>
                   <a href="#redireccion a un lugar">View more</a>
                 </figcaption>	
               </v-card>
@@ -243,30 +243,66 @@ figure.effect-marley:hover p {
 	transform: translate3d(0,-170px,0);
 }
 
+@media (max-width: 1372px) {
+  figure.effect-marley:hover h2::after,
+  figure.effect-marley:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,-145px,0);
+    transform: translate3d(0,-145px,0);
+  }
+}
+
+@media (max-width: 1276px) {
+  figure.effect-marley:hover h2::after,
+  figure.effect-marley:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,-135px,0);
+    transform: translate3d(0,-135px,0);
+  }
+}
+
 @media (max-width: 1150px) {
   figure.effect-marley:hover h2::after,
   figure.effect-marley:hover p {
     opacity: 1;
-    -webkit-transform: translate3d(0,-150px,0);
-    transform: translate3d(0,-150px,0);
+    -webkit-transform: translate3d(0,-135px,0);
+    transform: translate3d(0,-135px,0);
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1070px) {
   figure.effect-marley:hover h2::after,
   figure.effect-marley:hover p {
     opacity: 1;
-    -webkit-transform: translate3d(0,-130px,0);
-    transform: translate3d(0,-130px,0);
+    -webkit-transform: translate3d(0,-115px,0);
+    transform: translate3d(0,-115px,0);
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 991px) {
+  figure.effect-marley:hover h2::after,
+  figure.effect-marley:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,-90px,0);
+    transform: translate3d(0,-90px,0);
+  }
+}
+
+@media (max-width: 960px) {
   figure.effect-marley:hover h2::after,
   figure.effect-marley:hover p {
     opacity: 1;
     -webkit-transform: translate3d(0,-180px,0);
     transform: translate3d(0,-180px,0);
+  }
+}
+
+@media (max-width: 732px) {
+  figure.effect-marley:hover h2::after,
+  figure.effect-marley:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,-165px,0);
+    transform: translate3d(0,-165px,0);
   }
 }
 
@@ -274,17 +310,26 @@ figure.effect-marley:hover p {
   figure.effect-marley:hover h2::after,
   figure.effect-marley:hover p {
     opacity: 1;
-    -webkit-transform: translate3d(0,-170px,0);
-    transform: translate3d(0,-170px,0);
+    -webkit-transform: translate3d(0,-145px,0);
+    transform: translate3d(0,-145px,0);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 599px) {
   figure.effect-marley:hover h2::after,
   figure.effect-marley:hover p {
     opacity: 1;
     -webkit-transform: translate3d(0,-180px,0);
     transform: translate3d(0,-180px,0);
+  }
+}
+
+@media (max-width: 370px) {
+  figure.effect-marley:hover h2::after,
+  figure.effect-marley:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,-160px,0);
+    transform: translate3d(0,-160px,0);
   }
 }
 </style>

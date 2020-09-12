@@ -6,22 +6,23 @@
           <v-col class="d-flex child-flex" cols="12" sm="6">
             <v-card class="text-center mayeka" elevation="0">
               <div  class="center">
-                <h1 style="letter-spacing:10px; color:#000033; "  class="whoTitle"
+                <h1 style="letter-spacing:2px; color:#000033; "  class="whoTitle"
                     data-aos="fade-down-right"
                     data-aos-duration="2000"
                     data-aos-once="false"
                     data-aos-easing="linear"
-                    data-aos-anchor-placement="bottom-bottom">¿QUIÉNES SOMOS?</h1>
+                    data-aos-anchor-placement="bottom-bottom">BIENVENIDO A CARIBE APUESTA</h1>
 
-                <p class="pt-lg-12 pt-md-6 pt-sm-4 px-12 whoText" 
+                <p class="pt-lg-8 pt-md-6 pt-sm-4 px-12 whoText" 
                     data-aos="fade-up-left"
                     data-aos-duration="2000"
                     data-aos-once="false"
                     data-aos-easing="linear"
-                    data-aos-anchor-placement="bottom-bottom">Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. A, iste reprehenderit. Autem officia consequatur 
-                    vel deleniti necessitatibus quas iusto! Consequuntur veniam dolor facilis est nulla,
-                     dignissimos at in dolores ex.</p>
+                    data-aos-anchor-placement="bottom-bottom">
+                    En Caribe Apuesta encontrarás la mejor forma de apostar en una gran cantidad de juegos variados como animalitos, 
+                    loterias, triples, casino, ruleta, tragamonedas, entre otros... Del mismo modo garantizamos con nuestro equipo 
+                    depósitos seguros, retiros de fondos rápidos y un sistema de calidad para que puedas jugar con la mayor seguridad posible.
+                    </p>
               </div>
             </v-card>
           </v-col>
@@ -47,10 +48,9 @@
                     data-aos-duration="2000"
                     data-aos-once="false"
                     data-aos-easing="linear"
-                    data-aos-anchor-placement="bottom-bottom">Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. A, iste reprehenderit. Autem officia consequatur 
-                    vel deleniti necessitatibus quas iusto! Consequuntur veniam dolor facilis est nulla,
-                     dignissimos at in dolores ex.</p>
+                    data-aos-anchor-placement="bottom-bottom">
+                    <span style="color: blue;">COMPLETA ESTE TEXTO NO SE ME OCURRIO NADA</span><br>
+                    Caribe Apuesta sigue los lineamientos establecidos por CONALOR, Loteria de Margarita, INH y SINAHIP.</p>
               </div>
             </v-card>
           </v-col>
@@ -82,6 +82,16 @@ export default {
     align-items: center;
 }
 
+@media (max-width: 1150px) {
+  .whoTitle {
+    font-size: 20px !important;
+  }
+
+  .whoText {
+    font-size: 15px !important;
+  }
+}
+
 @media (max-width: 960px) {
   .whoTitle {
     font-size: 20px !important;
@@ -105,13 +115,36 @@ export default {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 880px) {
   .whoTitle {
     font-size: 15px !important;
   }
 
   .whoText {
     font-size: 10px !important;
+  }
+  
+  .center{
+      width:100%;
+      height:100%;
+      box-sizing:content-box;
+      position:absolute;
+      text-align: center;
+      top:0;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+@media (max-width: 670px) {
+  .whoTitle {
+    font-size: 10px !important;
+  }
+
+  .whoText {
+    font-size: 8px !important;
   }
   
   .center{

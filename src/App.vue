@@ -8,96 +8,113 @@
           </v-list-item-icon>
 
           <v-list-item-content>
-            <v-list-item-title 
-              color="#000033" class="mayeka" v-if="item.title !== 'INICIAR SESIÓN' && item.title !== 'REGISTRARSE'"
-              @click="$vuetify.goTo( item.redirection, 0, 2000)">
-              {{ item.title }}
-            </v-list-item-title>
-            
-          <!-- Menu desplegable para registarse -->
-          <v-dialog v-model="registrarse" width="500" v-else-if="item.title !== 'INICIAR SESIÓN'">
-            <template v-slot:activator="{on,attrs}">
-            <v-list-item-title 
-              color="#000033" class="mayeka" v-on="on" v-bind="attrs">
-            {{ item.title }}
+            <v-list-item-title
+              color="#000033"
+              class="mayeka"
+              v-if="item.title !== 'INICIAR SESIÓN' && item.title !== 'REGISTRARSE'"
+              @click="$vuetify.goTo( item.redirection, 0, 2000)"
+            >{{ item.title }}</v-list-item-title>
 
-            </v-list-item-title>
-            </template>
+            <!-- Menu desplegable para registarse -->
+            <v-dialog v-model="registrarse_movil" width="500" v-else-if="item.title !== 'INICIAR SESIÓN'">
+              <template v-slot:activator="{on,attrs}">
+                <v-list-item-title
+                  color="#000033"
+                  class="mayeka"
+                  v-on="on"
+                  v-bind="attrs"
+                >{{ item.title }}</v-list-item-title>
+              </template>
 
-            <v-card color="#000033" light elevation="12">
-              <v-card-title class="justify-center">
-                <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
-              </v-card-title>
-              <v-card-text class="pb-0">
-                <v-container fluid class="px-4 pb-0">
-                  <v-form>
-                    <v-row >
-                    <v-col cols="12" class="pb-0">
-                    <v-text-field class="mayeka" rounded solo placeholder="USUARIO"></v-text-field>
-                    </v-col>
-                    <v-col cols="6" class="pb-0">
-                    <v-text-field class="mayeka" rounded solo placeholder="NOMBRE"></v-text-field>
+              <v-card color="#000033" light elevation="12">
+                <v-card-title class="justify-center">
+                  <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
+                <v-btn absolute right top icon color="white" @click.stop="registrarse_movil = false">
+                  <v-icon>
+                    mdi-close
+                  </v-icon>
+                </v-btn>
+                </v-card-title>
+                <v-card-text class="pb-0">
+                  <v-container fluid class="px-4 pb-0">
+                    <v-form>
+                      <v-row>
+                        <v-col cols="6" class="pb-0">
+                          <v-text-field class="mayeka" type="text" rounded solo placeholder="USUARIO"></v-text-field>
+                        </v-col>
+                        <v-col cols="6" class="pb-0">
+                          <v-text-field class="mayeka" type="text" rounded solo placeholder="NOMBRE"></v-text-field>
+                        </v-col>
+                        <v-col cols="6" class="pb-0">
+                          <v-text-field class="mayeka" type="number" rounded solo placeholder="CÉDULA"></v-text-field>
+                        </v-col>
+                        <v-col cols="6" class="pb-0">
+                          <v-text-field class="mayeka" type="number" rounded solo placeholder="TELÉFONO"></v-text-field>
+                        </v-col>
+                        <v-col cols="12" class="pb-0">
+                          <v-text-field class="mayeka" type="mail" rounded solo placeholder="CORREO"></v-text-field>
+                          <v-text-field class="mayeka" type="mail" rounded solo placeholder="REPETIR CORREO"></v-text-field>
+                        </v-col>
+                        <v-col cols="6" class="pb-0">
+                          <v-text-field class="mayeka" type="password" rounded solo placeholder="CONTRASEÑA"></v-text-field>
+                        </v-col>
+                        <v-col cols="6" class="pb-0">
+                          <v-text-field
+                            class="mayeka"
+                            rounded
+                            solo
+                            type="password"
+                            placeholder="REPETIR CONTRASEÑA"
+                          ></v-text-field>
+                        </v-col>
+                      </v-row>
+                    </v-form>
+                  </v-container>
+                </v-card-text>
+                <v-card-actions class="d-flex justify-center pt-0 pb-8">
+                  <v-btn rounded outlined color="white" large class="mayeka">CREAR USUARIO</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+            <!-- Menu desplegable para iniciar sesion -->
+            <v-dialog v-model="iniciar_sesion_movil" width="500" v-else-if="item.title !== 'REGISTRARSE'">
+              <template v-slot:activator="{on,attrs}">
+                <v-list-item-title
+                  color="#000033"
+                  class="mayeka"
+                  v-on="on"
+                  v-bind="attrs"
+                >{{ item.title }}</v-list-item-title>
+              </template>
 
-                    </v-col>
-                    <v-col cols="6" class="pb-0">
-
-                    <v-text-field class="mayeka" rounded solo placeholder="CÉDULA"></v-text-field>
-                    </v-col>
-                    <v-col cols="12" class="pb-0">
-                    <v-text-field class="mayeka" rounded solo placeholder="CORREO"></v-text-field>
-                    <v-text-field class="mayeka" rounded solo placeholder="REPETIR CORREO"></v-text-field>
-
-                    </v-col>
-                    <v-col cols="6" class="pb-0">
-                    <v-text-field class="mayeka" rounded solo placeholder="CONTRASEÑA"></v-text-field>
-
-                    </v-col>
-                    <v-col cols="6" class="pb-0">
-                    <v-text-field class="mayeka" rounded solo placeholder="REPETIR CONTRASEÑA"></v-text-field>
-
-                    </v-col>
-                    </v-row>
-                  </v-form>
-                </v-container>
-              </v-card-text>
-              <v-card-actions class="d-flex justify-center pt-0 pb-8">
-                <v-btn rounded outlined color="white" large class="mayeka">CREAR USUARIO</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
-          <!-- Menu desplegable para iniciar sesion -->
-          <v-dialog v-model="iniciar_sesion" width="500" v-else-if="item.title !== 'REGISTRARSE'">
-            <template v-slot:activator="{on,attrs}">
-            <v-list-item-title 
-              color="#000033" class="mayeka" v-on="on" v-bind="attrs">
-            {{ item.title }}
-
-            </v-list-item-title>
-            </template>
-
-            <v-card color="#000033" light elevation="12">
-              <v-card-title class="justify-center">
-                <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
-              </v-card-title>
-              <v-card-text class="pb-0">
-                <v-container fluid class="px-4 pb-0">
-                  <v-form>
-                    <v-text-field class="mayeka" rounded solo placeholder="USUARIO O EMAIL"></v-text-field>
-                    <v-text-field class="mayeka" rounded solo placeholder="CONTRASEÑA"></v-text-field>
-                  </v-form>
-                </v-container>
-              </v-card-text>
-              <v-card-actions class="d-flex justify-center pt-0 pb-8">
-                <v-btn rounded outlined color="white" class="mayeka">INICIAR SESIÓN</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
+              <v-card color="#000033" light elevation="12">
+                <v-card-title class="justify-center">
+                  <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
+                <v-btn absolute right top icon color="white" @click.stop="iniciar_sesion_movil = false">
+                  <v-icon>
+                    mdi-close
+                  </v-icon>
+                </v-btn>
+                </v-card-title>
+                <v-card-text class="pb-0">
+                  <v-container fluid class="px-4 pb-0">
+                    <v-form>
+                      <v-text-field class="mayeka" rounded solo placeholder="USUARIO O EMAIL"></v-text-field>
+                      <v-text-field class="mayeka" rounded solo placeholder="CONTRASEÑA"></v-text-field>
+                    </v-form>
+                  </v-container>
+                </v-card-text>
+                <v-card-actions class="d-flex justify-center pt-0 pb-8">
+                  <v-btn rounded outlined color="white" class="mayeka">INICIAR SESIÓN</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app color="#000033" dark prominent>
+    <v-app-bar app color="#000033" dark prominent >
       <div
         class="d-flex align-center"
         data-aos="fade-right"
@@ -167,11 +184,20 @@
             data-aos-once="true"
             @click="$vuetify.goTo('#resultados', 0, 2000)"
           >RESULTADOS</v-btn>
-          <v-dialog v-model="registrarse" width="700">
+          <v-btn
+            class="mt-7 mayeka"
+            text
+            data-aos="zoom-out-down"
+            data-aos-duration="3500"
+            data-aos-once="true"
+            @click="$vuetify.goTo('#promociones', 0, 2000)"
+          >PROMOCIONES</v-btn>
+
+          <v-dialog v-model="registrarse" persistent  width="700">
             <template v-slot:activator="{on,attrs}">
               <v-btn
-                v-on="on"
                 v-bind="attrs"
+                v-on="on"
                 class="mt-7 mayeka"
                 outlined
                 rounded
@@ -181,40 +207,43 @@
               >REGISTRARSE</v-btn>
             </template>
 
-            <v-card color="#000033" light elevation="12">
+            <v-card color="#000033"  elevation="12">
               <v-card-title class="justify-center">
                 <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
+                <v-btn absolute right top icon color="white" @click.stop="registrarse = false">
+                  <v-icon>
+                    mdi-close
+                  </v-icon>
+                </v-btn>
               </v-card-title>
               <v-card-text class="pb-0">
                 <v-container fluid class="px-4 pb-0">
-                  <v-form>
-                    <v-row >
-                    <v-col cols="12" class="pb-0">
-                    <v-text-field class="mayeka" rounded solo placeholder="USUARIO"></v-text-field>
-                    </v-col>
-                    <v-col cols="6" class="pb-0">
-                    <v-text-field class="mayeka" rounded solo placeholder="NOMBRE"></v-text-field>
-
-                    </v-col>
-                    <v-col cols="6" class="pb-0">
-
-                    <v-text-field class="mayeka" rounded solo placeholder="CÉDULA"></v-text-field>
-                    </v-col>
-                    <v-col cols="12" class="pb-0">
-                    <v-text-field class="mayeka" rounded solo placeholder="CORREO"></v-text-field>
-                    <v-text-field class="mayeka" rounded solo placeholder="REPETIR CORREO"></v-text-field>
-
-                    </v-col>
-                    <v-col cols="6" class="pb-0">
-                    <v-text-field class="mayeka" rounded solo placeholder="CONTRASEÑA"></v-text-field>
-
-                    </v-col>
-                    <v-col cols="6" class="pb-0">
-                    <v-text-field class="mayeka" rounded solo placeholder="REPETIR CONTRASEÑA"></v-text-field>
-
-                    </v-col>
+                  
+                    <v-row>
+                        <v-col cols="6" class="pb-0">
+                          <v-text-field class="mayeka" type="text" rounded solo placeholder="USUARIO"></v-text-field>
+                        </v-col>
+                        <v-col cols="6" class="pb-0">
+                          <v-text-field class="mayeka" type="text" rounded solo placeholder="NOMBRE"></v-text-field>
+                        </v-col>
+                        <v-col cols="6" class="pb-0">
+                          <v-text-field class="mayeka" type="number" rounded solo placeholder="CÉDULA"></v-text-field>
+                        </v-col>
+                        <v-col cols="6" class="pb-0">
+                          <v-text-field class="mayeka" type="number" rounded solo placeholder="TELÉFONO"></v-text-field>
+                        </v-col>
+                      <v-col cols="12" class="pb-0">
+                        <v-text-field class="mayeka" type="email" rounded solo placeholder="CORREO"></v-text-field>
+                        <v-text-field class="mayeka" type="email" rounded solo placeholder="REPETIR CORREO"></v-text-field>
+                      </v-col>
+                      <v-col cols="6" class="pb-0">
+                        <v-text-field class="mayeka" type="password" rounded solo placeholder="CONTRASEÑA"></v-text-field>
+                      </v-col>
+                      <v-col cols="6" class="pb-0">
+                        <v-text-field class="mayeka" type="password" rounded solo placeholder="REPETIR CONTRASEÑA"></v-text-field>
+                      </v-col>
                     </v-row>
-                  </v-form>
+                  
                 </v-container>
               </v-card-text>
               <v-card-actions class="d-flex justify-center pt-0 pb-8">
@@ -223,7 +252,7 @@
             </v-card>
           </v-dialog>
 
-          <v-dialog v-model="iniciar_sesion" width="500">
+          <v-dialog v-model="iniciar_sesion" persistent width="500">
             <template v-slot:activator="{on,attrs}">
               <v-btn
                 v-on="on"
@@ -236,9 +265,14 @@
               >INICIAR SESIÓN</v-btn>
             </template>
 
-            <v-card color="#000033" light elevation="12">
+            <v-card color="#000033"  elevation="12">
               <v-card-title class="justify-center">
                 <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
+                <v-btn absolute right top icon color="white" @click="iniciar_sesion = false">
+                  <v-icon>
+                    mdi-close
+                  </v-icon>
+                </v-btn>
               </v-card-title>
               <v-card-text class="pb-0">
                 <v-container fluid class="px-4 pb-0">
@@ -300,9 +334,9 @@
                     <v-divider></v-divider>
                     <v-card-actions>
                       <v-form>
-                        <v-text-field outlined class="mayeka mt-6" placeholder="ESCRIBE AQUÍ"></v-text-field> 
+                        <v-text-field outlined class="mayeka mt-6" placeholder="ESCRIBE AQUÍ"></v-text-field>
                       </v-form>
-                      
+
                       <v-btn icon fab right absolute>
                         <v-icon>mdi-send</v-icon>
                       </v-btn>
@@ -356,27 +390,50 @@ export default {
   },
   data() {
     return {
-      iniciar_sesion:false,
+      iniciar_sesion: false,
       registrarse: false,
+      iniciar_sesion_movil: false,
+      registrarse_movil: false,
       chat: false,
       side_menu: false,
       items: [
         { title: "INICIAR SESIÓN", icon: "mdi-login-variant" },
         { title: "REGISTRARSE", icon: "mdi-account-plus-outline" },
-        { title: "JUEGOS", icon: "mdi-poker-chip", redirection: "#bloqueJuegos" },
-        { title: "¿CÓMO JUGAR?", icon: "mdi-help-circle-outline", redirection: "#bloqueComoJugar" },
-        { title: "PAGOS", icon: "mdi-credit-card-multiple-outline", redirection: "#bloquePagos" },
-        { title: "RESULTADOS", icon: "mdi-cards-playing-outline", redirection: "#resultados" },
+        {
+          title: "JUEGOS",
+          icon: "mdi-poker-chip",
+          redirection: "#bloqueJuegos",
+        },
+        {
+          title: "¿CÓMO JUGAR?",
+          icon: "mdi-help-circle-outline",
+          redirection: "#bloqueComoJugar",
+        },
+        {
+          title: "PAGOS",
+          icon: "mdi-credit-card-multiple-outline",
+          redirection: "#bloquePagos",
+        },
+        {
+          title: "RESULTADOS",
+          icon: "mdi-cards-playing-outline",
+          redirection: "#resultados",
+        },
+        {
+          title: "PROMOCIONES",
+          icon: "mdi-label-percent-outline",
+          redirection: "#promociones",
+        },
       ],
     };
   },
 
-  methods:{
+  methods: {
     redirectWapp: function (event) {
       /* https://wa.me/584123010777?text=Buen día, tengo algunas dudas sobre Caribe Apuestas... */
       /* https://web.whatsapp.com/send?phone=584123010777 */
       window.open("https://wa.me/584123010777");
-    }
+    },
   },
 };
 </script>
@@ -429,7 +486,7 @@ body[data-aos-duration="5000"] [data-aos],
 }
 @media (max-width: 600px) {
   .letters ul li a,
-  .letters3 ul li a{
+  .letters3 ul li a {
     font-size: 20px !important;
   }
 }
@@ -439,7 +496,7 @@ body[data-aos-duration="5000"] [data-aos],
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   #logoText {
     display: block !important;
   }

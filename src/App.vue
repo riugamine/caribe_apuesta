@@ -122,7 +122,7 @@
         data-aos-once="true"
         data-aos-easing="ease-in-out-sine"
       >
-        <v-btn fab icon dark @click.stop="side_menu = !side_menu" class="d-md-none d-xl-flex">
+        <v-btn fab icon dark @click.stop="side_menu = !side_menu" class="d-md-none d-xl-flex" id="menu-movil">
           <v-icon>mdi-menu</v-icon>
         </v-btn>
         <v-img
@@ -450,12 +450,14 @@ export default {
 #box {
   box-shadow: 0 !important;
 }
+
 .img-fluid {
   max-width: 100%;
   max-height: 100%;
   margin: auto;
   display: block;
 }
+
 .poiret {
   font-family: "Poiret";
 }
@@ -490,13 +492,13 @@ body[data-aos-duration="5000"] [data-aos],
     font-size: 20px !important;
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1410px) {
   #logoText {
     display: none;
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
   #logoText {
     display: block !important;
   }
@@ -505,12 +507,16 @@ body[data-aos-duration="5000"] [data-aos],
     display: none;
   }
 
+  #menu-movil{
+    display: block !important;
+  }
+
   #logo {
     margin: auto;
   }
 }
 
-@media (max-width: 765px) {
+@media (max-width: 600px) {
   #logoText {
     display: none !important;
   }

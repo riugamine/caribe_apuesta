@@ -4,8 +4,9 @@
 
 
         <v-row class="ma-0" style="overflow-x: hidden; overflow-y: hidden;">
+          
           <v-col cols="12">
-            <v-carousel cycle interval="6000">
+            <v-carousel cycle interval="6000" style="height: 100% !important">
               <v-carousel-item>
                 <v-img src="@/assets/images/c-1.jpg"></v-img>
               </v-carousel-item>
@@ -18,21 +19,22 @@
             </v-carousel>
           </v-col>
 
+          <v-card color="#000033" elevation="0" style="width: 100%">
+            <v-card-title class="white--text justify-center letters">
+              <ul>
+                <li>
+                  <a
+                    data-text="JUEGOS"
+                    class="mayeka"
+                    style="letter-spacing:10px; font-size:20pt"
+                  >JUEGOS</a>
+                </li>
+              </ul>
+            </v-card-title>
+          </v-card>
+
           <v-row>
             <v-col cols="4" sm="6" md="8" lg="12" xl="12">
-              <v-card color="#000033" elevation="0">
-                <v-card-title class="white--text justify-center letters">
-                  <ul>
-                    <li>
-                      <a
-                        data-text="JUEGOS"
-                        class="mayeka"
-                        style="letter-spacing:10px; font-size:20pt"
-                      >JUEGOS</a>
-                    </li>
-                  </ul>
-                </v-card-title>
-                </v-card>
               <v-sheet color="#000033" max-width="1400" class="mx-auto">
                 <v-slide-group show-arrows="desktop" dark v-model="slider" class="pa-4">
                   <!-- Juego 1 (Para realizar con un ciclo for se deben obtener las imagenes del servidor por medio de axios) -->
@@ -140,6 +142,11 @@ export default {
 </script>
 
 <style>
+/* Ajustando slider */
+.v-carousel__item{
+  height: auto !important;
+}
+/* fin ajustado */
 .letters {
   display: flex;
   text-overflow: ellipsis;
@@ -256,6 +263,7 @@ export default {
   position: absolute;
   width: 100%;
 }
+
 @media (max-width: 600px) {
   .post {
     padding-right: 0px !important;

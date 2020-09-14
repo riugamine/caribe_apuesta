@@ -1,18 +1,7 @@
 <template>
   <div id="bloqueJuegos" class="my-0">
     <v-sheet color="#000033">
-      <v-card color="#000033" elevation="0">
-        <!--         <v-card-title class="white--text justify-center letters">
-          <ul>
-            <li>
-              <a
-                data-text="JUEGOS"
-                class="mayeka"
-                style="letter-spacing:10px; font-size:20pt"
-              >JUEGOS</a>
-            </li>
-          </ul>
-        </v-card-title>-->
+
 
         <v-row class="ma-0" style="overflow-x: hidden; overflow-y: hidden;">
           <v-col cols="12">
@@ -31,6 +20,19 @@
 
           <v-row>
             <v-col cols="4" sm="6" md="8" lg="12" xl="12">
+              <v-card color="#000033" elevation="0">
+                <v-card-title class="white--text justify-center letters">
+                  <ul>
+                    <li>
+                      <a
+                        data-text="JUEGOS"
+                        class="mayeka"
+                        style="letter-spacing:10px; font-size:20pt"
+                      >JUEGOS</a>
+                    </li>
+                  </ul>
+                </v-card-title>
+                </v-card>
               <v-sheet color="#000033" max-width="1400" class="mx-auto">
                 <v-slide-group show-arrows="desktop" dark v-model="slider" class="pa-4">
                   <!-- Juego 1 (Para realizar con un ciclo for se deben obtener las imagenes del servidor por medio de axios) -->
@@ -122,80 +124,6 @@
             </v-col>
           </v-row>
         </v-row>
-        <!--         <v-row class="ma-0" style="overflow-x: hidden; overflow-y: hidden;">
-          <v-col
-            cols="12"
-            xl="8"
-            lg="8"
-            md="8"
-            sm="8"
-            xs="12"
-            class="post"
-            data-aos="fade-down-right"
-            data-aos-duration="2000"
-            data-aos-once="false"
-          >
-            <v-img class="imgJuegos" src="@/assets/images/la-granjita.jpg" max-height="300"></v-img>
-            <div class="post-s mayeka">
-              <h2>Animalitos</h2>
-            </div>
-          </v-col>
-
-          <v-col
-            cols="12"
-            xl="4"
-            lg="4"
-            md="4"
-            sm="4"
-            xs="12"
-            class="post"
-            data-aos="fade-down-left"
-            data-aos-duration="2000"
-            data-aos-once="false"
-          >
-            <v-img class="imgJuegos" src="@/assets/images/juego-4.jpg" max-height="300"></v-img>
-            <div class="post-s mayeka">
-              <h2>Caballos</h2>
-            </div>
-          </v-col>
-
-          <v-col
-            cols="12"
-            xl="4"
-            lg="4"
-            md="4"
-            sm="4"
-            xs="12"
-            class="post"
-            data-aos="fade-up-right"
-            data-aos-duration="2000"
-            data-aos-once="false"
-          >
-            <v-img class="imgJuegos" src="@/assets/images/juego-3.jpg" max-height="300"></v-img>
-            <div class="post-s mayeka">
-              <h2>Parley</h2>
-            </div>
-          </v-col>
-
-          <v-col
-            cols="12"
-            xl="8"
-            lg="8"
-            md="8"
-            sm="8"
-            xs="12"
-            class="post"
-            data-aos="fade-up-left"
-            data-aos-duration="2000"
-            data-aos-once="false"
-          >
-            <v-img class="imgJuegos" src="@/assets/images/juego-2.jpg" max-height="300"></v-img>
-            <div class="post-s mayeka">
-              <h2>Casino</h2>
-            </div>
-          </v-col>
-        </v-row>-->
-      </v-card>
     </v-sheet>
   </div>
 </template>

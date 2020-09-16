@@ -16,7 +16,11 @@
             >{{ item.title }}</v-list-item-title>
 
             <!-- Menu desplegable para registarse -->
-            <v-dialog v-model="registrarse_movil" width="500" v-else-if="item.title !== 'INICIAR SESIÓN'">
+            <v-dialog
+              v-model="registrarse_movil"
+              width="500"
+              v-else-if="item.title !== 'INICIAR SESIÓN'"
+            >
               <template v-slot:activator="{on,attrs}">
                 <v-list-item-title
                   color="#000033"
@@ -29,34 +33,81 @@
               <v-card color="#000033" light elevation="12">
                 <v-card-title class="justify-center">
                   <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
-                <v-btn absolute right top icon color="white" @click.stop="registrarse_movil = false">
-                  <v-icon>
-                    mdi-close
-                  </v-icon>
-                </v-btn>
+                  <v-btn
+                    absolute
+                    right
+                    top
+                    icon
+                    color="white"
+                    @click.stop="registrarse_movil = false"
+                  >
+                    <v-icon>mdi-close</v-icon>
+                  </v-btn>
                 </v-card-title>
                 <v-card-text class="pb-0">
                   <v-container fluid class="px-4 pb-0">
                     <v-form>
                       <v-row>
                         <v-col cols="6" class="pb-0">
-                          <v-text-field class="mayeka" type="text" rounded solo placeholder="USUARIO"></v-text-field>
+                          <v-text-field
+                            class="mayeka"
+                            type="text"
+                            rounded
+                            solo
+                            placeholder="USUARIO"
+                          ></v-text-field>
                         </v-col>
                         <v-col cols="6" class="pb-0">
-                          <v-text-field class="mayeka" type="text" rounded solo placeholder="NOMBRE"></v-text-field>
+                          <v-text-field
+                            class="mayeka"
+                            type="text"
+                            rounded
+                            solo
+                            placeholder="NOMBRE"
+                          ></v-text-field>
                         </v-col>
                         <v-col cols="6" class="pb-0">
-                          <v-text-field class="mayeka" type="number" rounded solo placeholder="CÉDULA"></v-text-field>
+                          <v-text-field
+                            class="mayeka"
+                            type="number"
+                            rounded
+                            solo
+                            placeholder="CÉDULA"
+                          ></v-text-field>
                         </v-col>
                         <v-col cols="6" class="pb-0">
-                          <v-text-field class="mayeka" type="number" rounded solo placeholder="TELÉFONO"></v-text-field>
+                          <v-text-field
+                            class="mayeka"
+                            type="number"
+                            rounded
+                            solo
+                            placeholder="TELÉFONO"
+                          ></v-text-field>
                         </v-col>
                         <v-col cols="12" class="pb-0">
-                          <v-text-field class="mayeka" type="mail" rounded solo placeholder="CORREO"></v-text-field>
-                          <v-text-field class="mayeka" type="mail" rounded solo placeholder="REPETIR CORREO"></v-text-field>
+                          <v-text-field
+                            class="mayeka"
+                            type="mail"
+                            rounded
+                            solo
+                            placeholder="CORREO"
+                          ></v-text-field>
+                          <v-text-field
+                            class="mayeka"
+                            type="mail"
+                            rounded
+                            solo
+                            placeholder="REPETIR CORREO"
+                          ></v-text-field>
                         </v-col>
                         <v-col cols="6" class="pb-0">
-                          <v-text-field class="mayeka" type="password" rounded solo placeholder="CONTRASEÑA"></v-text-field>
+                          <v-text-field
+                            class="mayeka"
+                            type="password"
+                            rounded
+                            solo
+                            placeholder="CONTRASEÑA"
+                          ></v-text-field>
                         </v-col>
                         <v-col cols="6" class="pb-0">
                           <v-text-field
@@ -77,7 +128,11 @@
               </v-card>
             </v-dialog>
             <!-- Menu desplegable para iniciar sesion -->
-            <v-dialog v-model="iniciar_sesion_movil" width="500" v-else-if="item.title !== 'REGISTRARSE'">
+            <v-dialog
+              v-model="iniciar_sesion_movil"
+              width="500"
+              v-else-if="item.title !== 'REGISTRARSE'"
+            >
               <template v-slot:activator="{on,attrs}">
                 <v-list-item-title
                   color="#000033"
@@ -90,11 +145,16 @@
               <v-card color="#000033" light elevation="12">
                 <v-card-title class="justify-center">
                   <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
-                <v-btn absolute right top icon color="white" @click.stop="iniciar_sesion_movil = false">
-                  <v-icon>
-                    mdi-close
-                  </v-icon>
-                </v-btn>
+                  <v-btn
+                    absolute
+                    right
+                    top
+                    icon
+                    color="white"
+                    @click.stop="iniciar_sesion_movil = false"
+                  >
+                    <v-icon>mdi-close</v-icon>
+                  </v-btn>
                 </v-card-title>
                 <v-card-text class="pb-0">
                   <v-container fluid class="px-4 pb-0">
@@ -114,7 +174,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app color="#000033" dark prominent >
+    <v-app-bar app color="#000033" dark prominent>
       <div
         class="d-flex align-center"
         data-aos="fade-right"
@@ -122,7 +182,14 @@
         data-aos-once="true"
         data-aos-easing="ease-in-out-sine"
       >
-        <v-btn fab icon dark @click.stop="side_menu = !side_menu" class="d-md-none d-xl-flex" id="menu-movil">
+        <v-btn
+          fab
+          icon
+          dark
+          @click.stop="side_menu = !side_menu"
+          class="d-md-none d-xl-flex"
+          id="menu-movil"
+        >
           <v-icon>mdi-menu</v-icon>
         </v-btn>
         <v-img
@@ -193,7 +260,7 @@
             @click="$vuetify.goTo('#promociones', 0, 2000)"
           >PROMOCIONES</v-btn>
 
-          <v-dialog v-model="registrarse" persistent  width="700">
+          <v-dialog v-model="registrarse" persistent width="700">
             <template v-slot:activator="{on,attrs}">
               <v-btn
                 v-bind="attrs"
@@ -207,43 +274,63 @@
               >REGISTRARSE</v-btn>
             </template>
 
-            <v-card color="#000033"  elevation="12">
+            <v-card color="#000033" elevation="12">
               <v-card-title class="justify-center">
                 <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
                 <v-btn absolute right top icon color="white" @click.stop="registrarse = false">
-                  <v-icon>
-                    mdi-close
-                  </v-icon>
+                  <v-icon>mdi-close</v-icon>
                 </v-btn>
               </v-card-title>
               <v-card-text class="pb-0">
                 <v-container fluid class="px-4 pb-0">
-                  
-                    <v-row>
-                        <v-col cols="6" class="pb-0">
-                          <v-text-field class="mayeka" type="text" rounded solo placeholder="USUARIO"></v-text-field>
-                        </v-col>
-                        <v-col cols="6" class="pb-0">
-                          <v-text-field class="mayeka" type="text" rounded solo placeholder="NOMBRE"></v-text-field>
-                        </v-col>
-                        <v-col cols="6" class="pb-0">
-                          <v-text-field class="mayeka" type="number" rounded solo placeholder="CÉDULA"></v-text-field>
-                        </v-col>
-                        <v-col cols="6" class="pb-0">
-                          <v-text-field class="mayeka" type="number" rounded solo placeholder="TELÉFONO"></v-text-field>
-                        </v-col>
-                      <v-col cols="12" class="pb-0">
-                        <v-text-field class="mayeka" type="email" rounded solo placeholder="CORREO"></v-text-field>
-                        <v-text-field class="mayeka" type="email" rounded solo placeholder="REPETIR CORREO"></v-text-field>
-                      </v-col>
-                      <v-col cols="6" class="pb-0">
-                        <v-text-field class="mayeka" type="password" rounded solo placeholder="CONTRASEÑA"></v-text-field>
-                      </v-col>
-                      <v-col cols="6" class="pb-0">
-                        <v-text-field class="mayeka" type="password" rounded solo placeholder="REPETIR CONTRASEÑA"></v-text-field>
-                      </v-col>
-                    </v-row>
-                  
+                  <v-row>
+                    <v-col cols="6" class="pb-0">
+                      <v-text-field class="mayeka" type="text" rounded solo placeholder="USUARIO"></v-text-field>
+                    </v-col>
+                    <v-col cols="6" class="pb-0">
+                      <v-text-field class="mayeka" type="text" rounded solo placeholder="NOMBRE"></v-text-field>
+                    </v-col>
+                    <v-col cols="6" class="pb-0">
+                      <v-text-field class="mayeka" type="number" rounded solo placeholder="CÉDULA"></v-text-field>
+                    </v-col>
+                    <v-col cols="6" class="pb-0">
+                      <v-text-field
+                        class="mayeka"
+                        type="number"
+                        rounded
+                        solo
+                        placeholder="TELÉFONO"
+                      ></v-text-field>
+                    </v-col>
+                    <v-col cols="12" class="pb-0">
+                      <v-text-field class="mayeka" type="email" rounded solo placeholder="CORREO"></v-text-field>
+                      <v-text-field
+                        class="mayeka"
+                        type="email"
+                        rounded
+                        solo
+                        placeholder="REPETIR CORREO"
+                      ></v-text-field>
+                    </v-col>
+                    <v-col cols="6" class="pb-0">
+                      <v-text-field
+                        class="mayeka"
+                        type="password"
+                        rounded
+                        solo
+                        placeholder="CONTRASEÑA"
+                      ></v-text-field>
+                    </v-col>
+                    <v-col cols="6" class="pb-0">
+                      <v-text-field
+                        class="mayeka"
+                        type="password"
+                        rounded
+                        solo
+                        placeholder="REPETIR CONTRASEÑA"
+                      ></v-text-field>
+                    </v-col>
+                  </v-row>
                 </v-container>
               </v-card-text>
               <v-card-actions class="d-flex justify-center pt-0 pb-8">
@@ -265,13 +352,11 @@
               >INICIAR SESIÓN</v-btn>
             </template>
 
-            <v-card color="#000033"  elevation="12">
+            <v-card color="#000033" elevation="12">
               <v-card-title class="justify-center">
                 <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
                 <v-btn absolute right top icon color="white" @click="iniciar_sesion = false">
-                  <v-icon>
-                    mdi-close
-                  </v-icon>
+                  <v-icon>mdi-close</v-icon>
                 </v-btn>
               </v-card-title>
               <v-card-text class="pb-0">
@@ -290,7 +375,50 @@
         </v-col>
       </v-row>
     </v-app-bar>
-
+    <!-- Boton flotante de promociones  -->
+    <v-dialog width="700">
+      <template v-slot:activator="{on,attrs}">
+        <div
+          style="position:fixed; z-index:100; height:700px"
+          class="d-flex justify-center align-center"
+        >
+          <v-btn
+            v-model="promos"
+            dark
+            color="#990000"
+            height="50px"
+            fixed
+            left
+            v-on="on"
+            v-bind="attrs"
+            class="rotar"
+          >
+            <span class="mayeka">PROMOCIONES</span>
+          </v-btn>
+        </div>
+      </template>
+      <v-card color="#000033" class="pb-4">
+        <v-card-title class="justify-center">
+          <img src="@/assets/images/ELEMENTO.png" class="mr-4" width="60px" />
+          <h1
+            class="mayeka white--text py-4"
+            style="letter-spacing:10px; font-size:24pt"
+          >PROMOCIONES</h1>
+        </v-card-title>
+        <v-row class="justify-center" no-gutters>
+          <v-col cols="12" xl="10" md="8" sm="12">
+            <v-carousel cycle interval="6000" style="height: 100% !important">
+              <v-carousel-item>
+                <v-img src="@/assets/images/promo1.jpg"></v-img>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-img src="@/assets/images/promo2.jpg"></v-img>
+              </v-carousel-item>
+            </v-carousel>
+          </v-col>
+        </v-row>
+      </v-card>
+    </v-dialog>
     <v-main>
       <bloque1></bloque1>
       <bloque2></bloque2>
@@ -306,7 +434,17 @@
         <v-col>
           <v-dialog v-model="chat" hide-overlay>
             <template v-slot:activator="{on,attrs}">
-              <v-btn v-on="on" v-bind="attrs" absolute right top light class="mr-8">
+              <v-btn
+                color="#990000"
+                dark
+                v-on="on"
+                v-bind="attrs"
+                absolute
+                right
+                top
+                light
+                class="mr-8"
+              >
                 <span>CHAT EN VIVO</span>
               </v-btn>
             </template>
@@ -396,6 +534,7 @@ export default {
       registrarse_movil: false,
       chat: false,
       side_menu: false,
+      promos: true,
       items: [
         { title: "INICIAR SESIÓN", icon: "mdi-login-variant" },
         { title: "REGISTRARSE", icon: "mdi-account-plus-outline" },
@@ -418,11 +557,6 @@ export default {
           title: "RESULTADOS",
           icon: "mdi-cards-playing-outline",
           redirection: "#resultados",
-        },
-        {
-          title: "PROMOCIONES",
-          icon: "mdi-label-percent-outline",
-          redirection: "#promociones",
         },
       ],
     };
@@ -456,6 +590,17 @@ export default {
   max-height: 100%;
   margin: auto;
   display: block;
+}
+.v-btn--fixed.v-btn--left {
+  left: -55px;
+}
+.rotar {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
 
 .poiret {
@@ -507,7 +652,7 @@ body[data-aos-duration="5000"] [data-aos],
     display: none;
   }
 
-  #menu-movil{
+  #menu-movil {
     display: block !important;
   }
 

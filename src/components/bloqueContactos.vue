@@ -50,15 +50,26 @@
 
           <v-col cols="12" md="4" sm="6" id="footDirection" >
             <v-row class="py-4 ">
-              <v-col class="white--text mayeka pb-0 d-flex justify-center" cols="12" md="12" sm="12" id="footImages">
+              <v-col class="white--text mayeka pb-0 d-flex justify-end" cols="6" md="6" sm="6" id="footImages">
                 <v-card color="#000345" width="160" flat tile class="text-center">
                   <img src="@/assets/images/inh.png" width="160" height="auto"/>
                 </v-card>
               </v-col>
 
-              <v-col class="white--text mayeka pb-0 d-flex justify-center" cols="12" md="12" sm="12" id="footImages">
+              <v-col class="white--text mayeka pb-0 d-flex justify-center" cols="6" md="6" sm="6" id="footImages">
                 <v-card color="white" width="160" flat class="text-center">
                   <img src="@/assets/images/conalot.png" width="130" height="auto"/>
+                </v-card>
+              </v-col>
+              <v-col class="white--text mayeka pb-0 d-flex justify-end" cols="6" md="6" sm="6" id="footImages">
+                <v-card color="#000345" width="160" flat tile class="text-center">
+                  <img src="@/assets/images/lim.jpg" width="70" height="auto"/>
+                </v-card>
+              </v-col>
+
+              <v-col class="white--text mayeka pb-0 d-flex justify-center" cols="6" md="6" sm="6" id="footImages">
+                <v-card color="white" width="160" flat class="text-center">
+                  <img src="@/assets/images/sunahip.jpg" width="130" height="auto"/>
                 </v-card>
               </v-col>
             </v-row>

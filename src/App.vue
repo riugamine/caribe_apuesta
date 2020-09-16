@@ -252,7 +252,7 @@
             @click="$vuetify.goTo('#resultados', 0, 2000)"
           >RESULTADOS</v-btn>
 
-          <v-dialog v-model="registrarse" persistent width="700">
+          <v-dialog v-model="registrarse" persistent width="700"  class="register-form">
             <template v-slot:activator="{on,attrs}">
               <v-btn
                 v-bind="attrs"
@@ -266,7 +266,7 @@
               >REGISTRARSE</v-btn>
             </template>
 
-            <v-card color="#000033" elevation="12">
+            <v-card color="#000033" elevation="12"  >
               <v-card-title class="justify-center">
                 <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
                 <v-btn absolute right top icon color="white" @click.stop="registrarse = false">
@@ -575,6 +575,9 @@ export default {
 }
 #box {
   box-shadow: 0 !important;
+}
+.v-dialog::-webkit-scrollbar{
+  overflow: hidden;
 }
 
 .img-fluid {

@@ -251,14 +251,6 @@
             data-aos-once="true"
             @click="$vuetify.goTo('#resultados', 0, 2000)"
           >RESULTADOS</v-btn>
-          <v-btn
-            class="mt-7 mayeka"
-            text
-            data-aos="zoom-out-down"
-            data-aos-duration="3500"
-            data-aos-once="true"
-            @click="$vuetify.goTo('#promociones', 0, 2000)"
-          >PROMOCIONES</v-btn>
 
           <v-dialog v-model="registrarse" persistent width="700">
             <template v-slot:activator="{on,attrs}">
@@ -637,13 +629,13 @@ body[data-aos-duration="5000"] [data-aos],
     font-size: 20px !important;
   }
 }
-@media (max-width: 1410px) {
+@media (max-width: 1300px) {
   #logoText {
     display: none;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 960px) {
   #logoText {
     display: block !important;
   }

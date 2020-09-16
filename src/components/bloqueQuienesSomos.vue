@@ -51,7 +51,7 @@
                     data-aos-anchor-placement="bottom-bottom">
                     Con el fin de lograr la mejor experiencia, 
                     Caribe Apuesta sigue los lineamientos establecidos 
-                    por CONALOR, Loteria de Margarita, INH y SINAHIP.
+                    por CONALOT, Loteria de Margarita, INH y SINAHIP.
                     
                     </p>
               </div>

@@ -49,8 +49,11 @@
                     data-aos-once="false"
                     data-aos-easing="linear"
                     data-aos-anchor-placement="bottom-bottom">
-                    <span style="color: blue;">COMPLETA ESTE TEXTO NO SE ME OCURRIO NADA</span><br>
-                    Caribe Apuesta sigue los lineamientos establecidos por CONALOR, Loteria de Margarita, INH y SINAHIP.</p>
+                    Con el fin de lograr la mejor experiencia, 
+                    Caribe Apuesta sigue los lineamientos establecidos 
+                    por CONALOR, Loteria de Margarita, INH y SINAHIP.
+                    
+                    </p>
               </div>
             </v-card>
           </v-col>

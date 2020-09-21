@@ -8,6 +8,7 @@
           </v-list-item-icon>
 
           <v-list-item-content>
+            
             <v-list-item-title
               color="#000033"
               class="mayeka"
@@ -127,6 +128,7 @@
                 </v-card-actions>
               </v-card>
             </v-dialog>
+
             <!-- Menu desplegable para iniciar sesion -->
             <v-dialog
               v-model="iniciar_sesion_movil"
@@ -139,6 +141,7 @@
                   class="mayeka"
                   v-on="on"
                   v-bind="attrs"
+                  v-on:click="redirectLogin"
                 >{{ item.title }}</v-list-item-title>
               </template>
 
@@ -169,6 +172,7 @@
                 </v-card-actions>
               </v-card>
             </v-dialog>
+
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -192,6 +196,7 @@
         >
           <v-icon>mdi-menu</v-icon>
         </v-btn>
+
         <v-img
           alt="Caribe apuesta logo"
           id="logoLogo"
@@ -266,6 +271,7 @@
               >REGISTRARSE</v-btn>
             </template>
 
+            <!-- MODAL DEL REGISTRO EN VERSION NORMAL -->
             <v-card color="#000033" elevation="12"  >
               <v-card-title class="justify-center">
                 <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
@@ -341,9 +347,11 @@
                 data-aos="zoom-out-down"
                 data-aos-duration="4000"
                 data-aos-once="true"
+                v-on:click="redirectLogin"
               >INICIAR SESIÓN</v-btn>
             </template>
 
+            <!-- MODAL DE LOGIN EN VERSION NORMAL -->
             <v-card color="#000033" elevation="12">
               <v-card-title class="justify-center">
                 <img src="@/assets/images/logo.png" alt="Caribe Apuesta" width="150" />
@@ -367,8 +375,10 @@
         </v-col>
       </v-row>
     </v-app-bar>
+
     <!-- Boton flotante de promociones  -->
     <v-dialog width="700">
+
       <template v-slot:activator="{on,attrs}">
         <div
           style="position:fixed; z-index:100; height:700px"
@@ -389,6 +399,7 @@
           </v-btn>
         </div>
       </template>
+
       <v-card color="#000033" class="pb-4">
         <v-card-title class="justify-center">
           <img src="@/assets/images/ELEMENTO.png" class="mr-4" width="60px" />
@@ -410,7 +421,9 @@
           </v-col>
         </v-row>
       </v-card>
+
     </v-dialog>
+
     <v-main>
       <bloque1></bloque1>
       <bloque2></bloque2>
@@ -477,11 +490,13 @@
             </v-container>
           </v-dialog>
         </v-col>
+
         <v-col class="pb-0 pt-2">
           <v-btn dark icon fab light>
             <v-icon size="35" v-on:click="redirectWapp">mdi-whatsapp</v-icon>
           </v-btn>
         </v-col>
+
         <v-col cols="12" style="background-color: #000033">
           <h4
             id="text-footer"
@@ -515,9 +530,11 @@ export default {
     bloque6,
     bloque7,
   },
+
   created() {
     AOS.init({});
   },
+
   data() {
     return {
       iniciar_sesion: false,
@@ -559,6 +576,10 @@ export default {
       /* https://wa.me/584123010777?text=Buen día, tengo algunas dudas sobre Caribe Apuestas... */
       /* https://web.whatsapp.com/send?phone=584123010777 */
       window.open("https://wa.me/584123010777");
+    },
+
+    redirectLogin: function (evetn){
+      window.location.href = 'https://caribeapuesta.com/enlinea/';
     },
   },
 };

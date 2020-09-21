@@ -25,6 +25,7 @@
     <v-sheet color="#000033" class="py-12">
       <v-container fluid class="py-12 px-15">
         <v-row no-gutters class="justify-center">
+
           <v-col color="#000033" class="d-flex child-flex" col lg="2" md="4" sm="4">
             <v-card color="#000033" class="text-center" elevation="0">
               <img
@@ -42,38 +43,12 @@
                 data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="false"
               >
-                <v-expansion-panels flat class="panel" dark>
-                  <v-expansion-panel>
-                    <v-expansion-panel-header style="font-size:14pt; line-height:20pt">
-                      BANCOS
-                      <br />NACIONALES
-                    </v-expansion-panel-header>
-                    <v-expansion-panel-content>
-                      <!-- Varias cuentas de bancos aca -->
-                      <v-expansion-panels flat class="panel" dark>
-                        <v-expansion-panel>
-                          <v-expansion-panel-header style="font-size:14pt; line-height:20pt">BOD</v-expansion-panel-header>
-                          <v-expansion-panel-content>
-                            A NOMBRE DE: OPERADORA LOTO ORIENTE C.A
-                            <br />RIF: PREGUNTAR
-                            <br />CUENTA: 0116-0118-92-0029087988
-                          </v-expansion-panel-content>
-                        </v-expansion-panel>
-                        <v-expansion-panel>
-                          <v-expansion-panel-header style="font-size:14pt; line-height:20pt">BANESCO</v-expansion-panel-header>
-                          <v-expansion-panel-content>
-                            A NOMBRE DE: COMERCIALIZADORA GLOBAL 1618, C.A.
-                            <br />RIF: J-40301941-0
-                            <br />CUENTA: 0134-1200-670001002284
-                          </v-expansion-panel-content>
-                        </v-expansion-panel>
-                      </v-expansion-panels>
-                    </v-expansion-panel-content>
-                  </v-expansion-panel>
-                </v-expansion-panels>
+                BANCOS
+                <br />NACIONALES
               </v-card-text>
             </v-card>
           </v-col>
+
           <v-col color="#000033" class="d-flex child-flex" col lg="2" md="4" sm="4">
             <v-card color="#000033" class="text-center" elevation="0">
               <img
@@ -91,15 +66,11 @@
                 data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="false"
               >
-                <v-expansion-panels flat class="panel" dark>
-                  <v-expansion-panel>
-                    <v-expansion-panel-header style="font-size:14pt">PAGO MÓVIL</v-expansion-panel-header>
-                    <v-expansion-panel-content>datos pago movil</v-expansion-panel-content>
-                  </v-expansion-panel>
-                </v-expansion-panels>
+                PAGO MÓVIL
               </v-card-text>
             </v-card>
           </v-col>
+
           <v-col color="#000033" class="d-flex child-flex" col lg="2" md="4" sm="4">
             <v-card color="#000033" class="text-center" elevation="0">
               <img
@@ -117,15 +88,11 @@
                 data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="false"
               >
-                <v-expansion-panels flat class="panel" dark>
-                  <v-expansion-panel>
-                    <v-expansion-panel-header style="font-size:14pt">SKRILL</v-expansion-panel-header>
-                    <v-expansion-panel-content>correo de skrill</v-expansion-panel-content>
-                  </v-expansion-panel>
-                </v-expansion-panels>
+                SKRILL
               </v-card-text>
             </v-card>
           </v-col>
+
           <v-col color="#000033" class="d-flex child-flex" col lg="2" md="4" sm="4">
             <v-card color="#000033" class="text-center" elevation="0">
               <img
@@ -143,17 +110,11 @@
                 data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="false"
               >
-                <v-expansion-panels flat class="panel" dark>
-                  <v-expansion-panel>
-                    <v-expansion-panel-header style="font-size:14pt">PAYPAL</v-expansion-panel-header>
-                    <v-expansion-panel-content>
-                      <a href="http://paypal.me/facilapuesta" class="link">PAYPAL.ME</a>
-                    </v-expansion-panel-content>
-                  </v-expansion-panel>
-                </v-expansion-panels>
+                PAYPAL
               </v-card-text>
             </v-card>
           </v-col>
+
           <v-col color="#000033" class="d-flex child-flex" col lg="2" md="4" sm="4">
             <v-card color="#000033" class="text-center" elevation="0">
               <img
@@ -171,19 +132,7 @@
                 data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="false"
               >
-                <v-expansion-panels flat class="panel" dark>
-                  <v-expansion-panel>
-                    <v-expansion-panel-header style="font-size:14pt">CRIPTOMONEDAS</v-expansion-panel-header>
-                    <v-expansion-panel-content>
-                      <v-expansion-panels flat class="panel" dark>
-                        <v-expansion-panel>
-                          <v-expansion-panel-header style="font-size:14pt">BITCOIN</v-expansion-panel-header>
-                          <v-expansion-panel-content>1Khp38HUAaM6BrxVukxnRnCMz5XVEUvc88</v-expansion-panel-content>
-                        </v-expansion-panel>
-                      </v-expansion-panels>
-                    </v-expansion-panel-content>
-                  </v-expansion-panel>
-                </v-expansion-panels>
+                CRIPTOMONEDAS
               </v-card-text>
             </v-card>
           </v-col>
